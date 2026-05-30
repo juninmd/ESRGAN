@@ -1,5 +1,27 @@
-# folder
-.vscode
+# Environments and secrets
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+*.p12
+*.cert
+secrets/
+config/secrets.yml
+credentials.yml
+credentials.json
+*.secret
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
 
 # file type
 *.svg
@@ -9,4 +31,15 @@
 *.caffemodel
 *.mat
 *.npy
+
+# Python
+__pycache__/
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Logs and debug
+*.log
+debug/
 
