@@ -6,6 +6,19 @@ on:
 concurrency:
   group: validate-${{ github.ref }}
   cancel-in-progress: true
+permissions:
+  contents: read
 jobs:
-  check:
-    uses: juninmd/base-actions/.github/workflows/reusable-validate.yml@main
+  lint:
+    name: Code Quality
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Lint with flake8
+        run: |
+          pip install flake8
+          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics

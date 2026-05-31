@@ -1,12 +1,60 @@
-# folder
-.vscode
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+*.p12
+secrets/
+config/secrets.yml
 
-# file type
-*.svg
-*.pyc
+# IDE and editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+*.whl
+*.so
+*.dylib
+*.dll
+
+# Model files
 *.pth
 *.t7
 *.caffemodel
 *.mat
 *.npy
+*.pt
+*.pkl
+*.h5
+*.onnx
 
+# Image files
+*.svg
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+*.webp
+
+# Results and temp
+results/
+LR/*.png
+LR/*.jpg
+*.log
+*.bak
+*.tmp

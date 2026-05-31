@@ -12,7 +12,7 @@ device = torch.device('cuda')  # if you want to run on CPU, change 'cuda' -> cpu
 test_img_folder = 'LR/*'
 
 model = arch.RRDBNet(3, 3, 64, 23, gc=32)
-model.load_state_dict(torch.load(model_path), strict=True)
+model.load_state_dict(torch.load(model_path, weights_only=True), strict=True)
 model.eval()
 model = model.to(device)
 

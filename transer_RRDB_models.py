@@ -2,7 +2,7 @@ import os
 import torch
 import RRDBNet_arch as arch
 
-pretrained_net = torch.load('./models/RRDB_ESRGAN_x4.pth')
+pretrained_net = torch.load('./models/RRDB_ESRGAN_x4.pth', weights_only=True)
 save_path = './models/RRDB_ESRGAN_x4.pth'
 
 crt_model = arch.RRDBNet(3, 3, 64, 23, gc=32)
