@@ -19,7 +19,7 @@ if not osp.exists(model_path):
     sys.exit(1)
 
 model = arch.RRDBNet(3, 3, 64, 23, gc=32)
-model.load_state_dict(torch.load(model_path, map_location=device), strict=True)
+model.load_state_dict(torch.load(model_path, map_location=device, weights_only=True), strict=True)
 model.eval()
 model = model.to(device)
 
