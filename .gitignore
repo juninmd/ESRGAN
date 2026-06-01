@@ -1,5 +1,27 @@
 # folder
 .vscode
+__pycache__/
+.ipynb_checkpoints/
+
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+*.p12
+*.pfx
+*.cert
+secrets/
+config/secrets.yml
+docker-compose.override.yml
+
+# IDE and editor
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
 
 # file type
 *.svg
@@ -9,4 +31,10 @@
 *.caffemodel
 *.mat
 *.npy
+*.pkl
+*.h5
+*.hdf5
 
+# Logs and runtime
+*.log
+output/
