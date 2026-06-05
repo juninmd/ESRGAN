@@ -1,4 +1,4 @@
-﻿name: Security Scan
+name: Security Scan
 on:
   push:
     branches: [main, master]
@@ -34,7 +34,7 @@ jobs:
         with:
           python-version: '3.10'
       - name: Install Bandit
-        run: pip install bandit
+        run: pip install bandit bandit-sarif-formatter
       - name: Run Bandit
         run: bandit -ll -r . -f sarif -o bandit-results.sarif
         continue-on-error: true
